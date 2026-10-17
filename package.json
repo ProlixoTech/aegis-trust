@@ -3,7 +3,7 @@
   "name": "aegis-trust",
   "repository": {"type": "git", "url": "https://github.com/ProlixoTech/aegis-trust"},
   "displayName": "AEGIS Trust",
-  "description": "v0.1 Prototype ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Phase 2-C2: verified .env restore engine with Truthful Ledger and Markdown Work Receipt.",
+  "description": "A free, open-source VS Code extension for workspace snapshots, recoverability checks, and review of proposed operations.",
   "publisher": "prolixotech",
   "version": "0.1.0",
   "engines": {

@@ -2,9 +2,9 @@
 
 **A free, open-source safety layer for AI-assisted development in VS Code.**
 
-AEGIS is a VS Code extension under active development. Its goal is to help developers protect important workspace files by checking recoverability and evaluating proposed operations before handing them off through AEGIS-controlled workflows.
+AEGIS Trust is a VS Code extension under active development. Its goal is to help developers protect important workspace files by checking recoverability and evaluating proposed operations before handing them off through AEGIS-controlled workflows.
 
-> **Pre-release project.** The source, public build instructions, and security claims are subject to verification. Do not assume that a public release is available or that AEGIS replaces normal backups, access controls, credential management, or careful review of AI-generated changes.
+> **Public source, pre-release extension.** The source is available in this repository, but a VS Code Marketplace release has not yet been published. Public build instructions and security claims remain subject to verification. AEGIS Trust does not replace normal backups, access controls, credential management, or careful review of AI-generated changes.
 
 ## What AEGIS is designed to do
 
@@ -23,14 +23,14 @@ Snapshots may contain copies of sensitive file contents. Never commit `.env` fil
 
 ## Project status
 
-- License target: Apache-2.0, **to be applied only after copyright and third-party rights clearance**.
-- Public source release: pending publication review.
+- Source license: Apache-2.0 (see [LICENSE](LICENSE)).
+- Public source release: published at https://github.com/ProlixoTech/aegis-trust.
 - Official release packages and platform support matrix: not yet published.
-- Project working name: AEGIS; the existing internal extension package identifier may change before public release.
+- Project name: AEGIS Trust; VS Code extension identifier: `prolixotech.aegis-trust`.
 
 ## Contributing
 
-We welcome thoughtful bug reports, tests, documentation improvements, and narrowly scoped code contributions once the public repository is opened. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. Do not post security vulnerabilities publicly; use the process in [SECURITY.md](SECURITY.md).
+We welcome thoughtful bug reports, tests, documentation improvements, and narrowly scoped code contributions. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. Do not post security vulnerabilities publicly; use the process in [SECURITY.md](SECURITY.md).
 
 ## Stewardship and contact
 
@@ -38,7 +38,7 @@ Maintained as an open-source initiative by **ProlixoTech Inc.**
 Project contact: **mathew.lee@prolixotech.com**  
 Website: https://prolixotech.com/
 
-Copyright ownership and the source license will be finalized before the actual first public source release.
+For license terms, see [LICENSE](LICENSE).
 
 ## Server ruleset service availability
 
