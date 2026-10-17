@@ -1,0 +1,16 @@
+node_modules/
+out/
+dist/
+coverage/
+*.vsix
+.env*
+.aegis/
+**/.aegis/
+*.key
+*.p12
+*.pfx
+*.pem
+!resources/server-ruleset/pinned-root-public-key.pem
+.DS_Store
+**/*-staging*/
+**/*-PRIVATE-*/

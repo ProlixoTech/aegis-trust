@@ -1,0 +1,103 @@
+{
+  "private": true,
+  "name": "aegis-trust",
+  "repository": {"type": "git", "url": "https://github.com/ProlixoTech/aegis-trust"},
+  "displayName": "AEGIS Trust",
+  "description": "v0.1 Prototype ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Phase 2-C2: verified .env restore engine with Truthful Ledger and Markdown Work Receipt.",
+  "publisher": "prolixotech",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:aegis.showProtectionPanel",
+    "onCommand:aegis.phase1.status",
+    "onCommand:aegis.phase1.restoreLastSafeState",
+    "onCommand:aegis.generateWorkReceipt",
+    "onCommand:aegis.registerCleanBaseline",
+    "onCommand:aegis.reviewAiCommandOrAction",
+    "onCommand:aegis.readSafetyKernelV31Session",
+    "onCommand:aegis.confirmSafetyKernelV31WarnSession",
+    "onCommand:aegis.cancelSafetyKernelV31WarnSession",
+    "onCommand:aegis.protectedTerminal",
+    "onCommand:aegis.aegisExecutionGatewayMvp0",
+    "onCommand:aegis.runTrustedLocalVerification"
+  ],
+  "main": "./out/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Aegis remains active in Restricted Mode but blocks all Aegis operations until the workspace is trusted."
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command":  "aegis.showProtectionPanel",
+        "title":  "Aegis: Show Protection Panel"
+      },
+      {
+        "command":  "aegis.phase1.status",
+        "title":  "Aegis Phase 1: Show Core Status"
+      },
+      {
+        "command":  "aegis.phase1.restoreLastSafeState",
+        "title":  "Aegis Phase 1: Restore Last Safe State"
+      },
+      {
+        "command":  "aegis.generateWorkReceipt",
+        "title":  "Aegis: Generate Work Receipt"
+      },
+      {
+        "command":  "aegis.registerCleanBaseline",
+        "title":  "Aegis: Register Current Clean Baseline"
+      },
+      {
+        "command":  "aegis.reviewAiCommandOrAction",
+        "title":  "Aegis: Review AI Command / Action"
+      },
+      {
+        "command":  "aegis.readSafetyKernelV31Session",
+        "title":  "Aegis: Read Safety Kernel v3.1 Session"
+      },
+      {
+        "command":  "aegis.confirmSafetyKernelV31WarnSession",
+        "title":  "Aegis: Confirm Safety Kernel v3.1 WARN Session"
+      },
+      {
+        "command":  "aegis.cancelSafetyKernelV31WarnSession",
+        "title":  "Aegis: Cancel Safety Kernel v3.1 WARN Session"
+      },
+      {
+        "command":  "aegis.protectedTerminal",
+        "title":  "Aegis: Protected Terminal (MVP-0)"
+      },
+      {
+        "command":  "aegis.aegisExecutionGatewayMvp0",
+        "title":  "Aegis: AI Execution Gateway MVP-0"
+      },
+      {
+        "command":  "aegis.runTrustedLocalVerification",
+        "title":  "Aegis: Run Trusted Local Verification"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "npm --prefix packages/aegis-core run build && tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --allow-missing-repository",
+    "test": "npm run compile && node --test out/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^2.22.0"
+  },
+  "license": "Apache-2.0"
+}

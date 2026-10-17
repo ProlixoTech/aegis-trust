@@ -1,0 +1,16 @@
+{
+  "name": "@prolixo/aegis-core",
+  "version": "0.1.0-core.1",
+  "private": true,
+  "description": "Reusable Aegis policy and action-quality core",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node ../../node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/*.test.js"
+  },
+  "license": "Apache-2.0"
+}

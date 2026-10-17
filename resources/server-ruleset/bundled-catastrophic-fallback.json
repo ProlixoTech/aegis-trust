@@ -1,0 +1,580 @@
+{
+  "schemaVersion": 1,
+  "rulesetId": "bundled-catastrophic-fallback",
+  "rulesetVersion": 1,
+  "monotonicCounter": 1,
+  "notBefore": "2026-07-27T00:00:00.000Z",
+  "notAfter": "2027-07-27T00:00:00.000Z",
+  "rules": [
+    {
+      "ruleId": "catastrophic.macos.rm.root.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+/[*]?$"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.root.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+/[*]?[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-tilde.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+~$"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-tilde.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+~[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-tilde-glob.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+~/[*]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-tilde-glob.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+~/[*][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+[$]HOME$"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+[$]HOME[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-braced-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+[$][{]HOME[}]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.rm.home-braced-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*rm[ ]+-[fRr]+[ ]+[$][{]HOME[}][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.root.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+/[*]?$"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.root.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+/[*]?[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-tilde.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+~$"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-tilde.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+~[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-tilde-glob.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+~/[*]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-tilde-glob.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+~/[*][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+[$]HOME$"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+[$]HOME[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-braced-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+[$][{]HOME[}]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.bin-rm.home-braced-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/bin/rm[ ]+-[fRr]+[ ]+[$][{]HOME[}][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.root.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+/[*]?$"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.root.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+/[*]?[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-tilde.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+~$"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-tilde.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+~[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-tilde-glob.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+~/[*]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-tilde-glob.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+~/[*][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+[$]HOME$"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+[$]HOME[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-braced-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+[$][{]HOME[}]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.usr-bin-rm.home-braced-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*/usr/bin/rm[ ]+-[fRr]+[ ]+[$][{]HOME[}][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.root.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+/[*]?$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.root.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+/[*]?[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-tilde.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+~$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-tilde.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+~[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-tilde-glob.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+~/[*]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-tilde-glob.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+~/[*][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+[$]HOME$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+[$]HOME[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-braced-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+[$][{]HOME[}]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-rm.home-braced-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+rm[ ]+-[fRr]+[ ]+[$][{]HOME[}][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.root.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+/[*]?$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.root.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+/[*]?[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-tilde.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+~$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-tilde.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+~[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-tilde-glob.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+~/[*]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-tilde-glob.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+~/[*][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+[$]HOME$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+[$]HOME[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-braced-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+[$][{]HOME[}]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-h-rm.home-braced-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-H[ ]+rm[ ]+-[fRr]+[ ]+[$][{]HOME[}][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.root.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+/[*]?$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.root.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+/[*]?[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-tilde.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+~$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-tilde.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+~[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-tilde-glob.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+~/[*]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-tilde-glob.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+~/[*][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+[$]HOME$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+[$]HOME[ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-braced-variable.exact.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+[$][{]HOME[}]$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-u-root-rm.home-braced-variable.trailing.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+-u[ ]+root[ ]+rm[ ]+-[fRr]+[ ]+[$][{]HOME[}][ ]+"
+    },
+    {
+      "ruleId": "catastrophic.macos.find.root-delete.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*find[ ]+/[ ]+-delete$"
+    },
+    {
+      "ruleId": "catastrophic.macos.find.home-delete.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*find[ ]+~[ ]+-delete$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-find.root-delete.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+find[ ]+/[ ]+-delete$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-find.home-delete.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+find[ ]+~[ ]+-delete$"
+    },
+    {
+      "ruleId": "catastrophic.macos.dd.zero-primary-disk.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*dd[ ]+if=/dev/zero[ ]+of=/dev/disk0"
+    },
+    {
+      "ruleId": "catastrophic.macos.dd.random-primary-disk.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*dd[ ]+if=/dev/random[ ]+of=/dev/disk0"
+    },
+    {
+      "ruleId": "catastrophic.macos.dd.urandom-primary-disk.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*dd[ ]+if=/dev/urandom[ ]+of=/dev/disk0"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-dd.zero-primary-disk.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+dd[ ]+if=/dev/zero[ ]+of=/dev/disk0"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-dd.random-primary-disk.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+dd[ ]+if=/dev/random[ ]+of=/dev/disk0"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-dd.urandom-primary-disk.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+dd[ ]+if=/dev/urandom[ ]+of=/dev/disk0"
+    },
+    {
+      "ruleId": "catastrophic.macos.diskutil.zero-primary-dev-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*diskutil[ ]+zeroDisk[ ]+/dev/disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.diskutil.erase-primary-dev-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*diskutil[ ]+eraseDisk[ ]+[A-Za-z0-9_+./ :\"'-]+[ ]+/dev/disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.diskutil.zero-primary-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*diskutil[ ]+zeroDisk[ ]+disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.diskutil.erase-primary-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*diskutil[ ]+eraseDisk[ ]+[A-Za-z0-9_+./ :\"'-]+[ ]+disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-diskutil.zero-primary-dev-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+diskutil[ ]+zeroDisk[ ]+/dev/disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-diskutil.erase-primary-dev-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+diskutil[ ]+eraseDisk[ ]+[A-Za-z0-9_+./ :\"'-]+[ ]+/dev/disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-diskutil.zero-primary-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+diskutil[ ]+zeroDisk[ ]+disk0$"
+    },
+    {
+      "ruleId": "catastrophic.macos.sudo-diskutil.erase-primary-disk0.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*sudo[ ]+diskutil[ ]+eraseDisk[ ]+[A-Za-z0-9_+./ :\"'-]+[ ]+disk0$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.path-rec-force.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.path-force-rec.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.pathparam-path-rec-force.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[pP][aA][tT][hH][ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.pathparam-path-force-rec.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[pP][aA][tT][hH][ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.rec-force-pathparam-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[pP][aA][tT][hH][ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.force-rec-pathparam-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[pP][aA][tT][hH][ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.rec-force-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.c-drive-root.force-rec-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+[\"']?[Cc]:[\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.path-rec-force.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.path-force-rec.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.pathparam-path-rec-force.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[pP][aA][tT][hH][ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.pathparam-path-force-rec.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[pP][aA][tT][hH][ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.rec-force-pathparam-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[pP][aA][tT][hH][ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.force-rec-pathparam-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[pP][aA][tT][hH][ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.rec-force-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.remove-item.system-drive-root.force-rec-path.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][eE][mM][oO][vV][eE]-[iI][tT][eE][mM][ ]+-[Ff][Oo][Rr][Cc]?[Ee]?[ ]+-[Rr][Ee][Cc][Uu]?[Rr]?[Ss]?[Ee]?[ ]+[\"']?[$][Ee][Nn][Vv]:[Ss][Yy][Ss][Tt][Ee][Mm][Dd][Rr][Ii][Vv][Ee][\\\\/][*]?[\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.clear-disk.primary.number-first.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[cC][lL][eE][aA][rR]-[dD][iI][sS][kK][ ]+-[Nn][Uu][Mm][Bb]?[Ee]?[Rr]?[ ]+0[ ]+-[rR][eE][mM][oO][vV][eE][dD][aA][tT][aA]"
+    },
+    {
+      "ruleId": "catastrophic.windows.powershell.clear-disk.primary.remove-data-first.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[cC][lL][eE][aA][rR]-[dD][iI][sS][kK][ ]+-[rR][eE][mM][oO][vV][eE][dD][aA][tT][aA][ ]+-[Nn][Uu][Mm][Bb]?[Ee]?[Rr]?[ ]+0"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.rd.root.s-q.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][dD][ ]+/[Ss][ ]+/[Qq][ ]+[\"']?[Cc]:[\\\\/][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.rd.root.q-s.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][dD][ ]+/[Qq][ ]+/[Ss][ ]+[\"']?[Cc]:[\\\\/][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.rmdir.root.s-q.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][mM][dD][iI][rR][ ]+/[Ss][ ]+/[Qq][ ]+[\"']?[Cc]:[\\\\/][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.rmdir.root.q-s.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[rR][mM][dD][iI][rR][ ]+/[Qq][ ]+/[Ss][ ]+[\"']?[Cc]:[\\\\/][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.flags-first.f-s-q.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+/[Ff][ ]+/[Ss][ ]+/[Qq][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.path-first.f-s-q.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]+/[Ff][ ]+/[Ss][ ]+/[Qq][ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.flags-first.f-q-s.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+/[Ff][ ]+/[Qq][ ]+/[Ss][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.path-first.f-q-s.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]+/[Ff][ ]+/[Qq][ ]+/[Ss][ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.flags-first.s-f-q.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+/[Ss][ ]+/[Ff][ ]+/[Qq][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.path-first.s-f-q.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]+/[Ss][ ]+/[Ff][ ]+/[Qq][ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.flags-first.s-q-f.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+/[Ss][ ]+/[Qq][ ]+/[Ff][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.path-first.s-q-f.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]+/[Ss][ ]+/[Qq][ ]+/[Ff][ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.flags-first.q-f-s.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+/[Qq][ ]+/[Ff][ ]+/[Ss][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.path-first.q-f-s.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]+/[Qq][ ]+/[Ff][ ]+/[Ss][ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.flags-first.q-s-f.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+/[Qq][ ]+/[Ss][ ]+/[Ff][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.del.root-contents.path-first.q-s-f.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[dD][eE][lL][ ]+[\"']?[Cc]:[\\\\/][*][\"']?[ ]+/[Qq][ ]+/[Ss][ ]+/[Ff][ ]*$"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.format.system-drive.drive-first.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[fF][oO][rR][mM][aA][tT][ ]+[Cc]:[ ]+/[Yy]"
+    },
+    {
+      "ruleId": "catastrophic.windows.cmd.format.system-drive.y-first.v1",
+      "category": "catastrophic",
+      "pattern": "^[ ]*[fF][oO][rR][mM][aA][tT][ ]+/[Yy][ ]+[Cc]:"
+    }
+  ]
+}
