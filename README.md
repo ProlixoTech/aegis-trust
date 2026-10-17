@@ -1,55 +1,57 @@
 # AEGIS Trust
 
-**A free, open-source safety layer for AI-assisted development in VS Code.**
+**Before acting on an AI-suggested change, take a closer look at the files and commands that matter.**
 
-[Install AEGIS Trust from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)
+AEGIS Trust is a **free, open-source VS Code extension** for local snapshots, recoverability checks, command review, and work receipts in **AEGIS-managed workflows**. It helps developers make more deliberate decisions around selected important project files. It does not intercept every AI tool or protect every filesystem operation.
 
-AEGIS Trust is a VS Code extension under active development. Its goal is to help developers protect important workspace files by checking recoverability and evaluating proposed operations before handing them off through AEGIS-controlled workflows.
+**[Install from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)** · [Get started](docs/GETTING-STARTED.md) · [See real-world use cases](docs/USAGE-EXAMPLES.md) · [Security model](docs/SECURITY-MODEL.md)
 
-> **Initial Marketplace release (0.1.0).** AEGIS Trust is available on the VS Code Marketplace, and its source is publicly available here. Public build instructions and security claims remain subject to verification. AEGIS Trust does not replace normal backups, access controls, credential management, or careful review of AI-generated changes.
+## Why AEGIS Trust?
 
-## What AEGIS is designed to do
+AI coding assistants can suggest changes to configuration files, dependencies, or shell commands. Those suggestions can be useful, but a quick review and a recoverable starting point matter before you act.
 
-- Manage selected protected workspace targets and local snapshots, including baseline registration for supported files.
-- Verify snapshots before supported protected operations; reject the handoff when the required snapshot step fails.
-- Review a proposed terminal command through the AEGIS Protected Terminal workflow. When permitted, the command is inserted for the user to execute rather than automatically run.
-- Support restore-oriented workflows, integrity checks, and policy-driven safety decisions.
+AEGIS Trust provides a **local checkpoint within its supported workflows**:
 
-The latest internal evidence includes passing isolated regression tests and module-level failure-injection checks. That evidence is **not** a completed independent security audit or a guarantee of every end-to-end execution path.
+| What you want to do | How AEGIS Trust helps |
+| --- | --- |
+| Notice sensitive project files | The Workspace Risk Scan highlights up to three filenames worth reviewing; it is a limited, local, filename-based scan, **not** a content or malware scan. |
+| Prepare for edits to selected files | Supported protected targets have baseline, snapshot, and restore-oriented workflows. Examples include `.env`, `.env.local`, `package.json`, `tsconfig.json`, and selected source files. |
+| Consider an AI-suggested command | **Aegis: Review AI Command / Action** and **Aegis: Protected Terminal (MVP-0)** offer review paths; when a command is permitted for terminal handoff, the user still chooses whether to execute it. |
+| Keep a local record | **Aegis: Generate Work Receipt** produces a Markdown receipt from local AEGIS ledger information where available. |
 
-## Security boundaries
+## Your first 3 minutes
 
-AEGIS is **not** an operating-system sandbox, a universal filesystem firewall, or a replacement for a secrets manager. The AEGIS Protected Terminal workflow cannot prevent arbitrary edits made in an ordinary terminal, by external processes, or by integrations outside its control.
+1. [Install AEGIS Trust](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust) in VS Code (compatible with VS Code `^1.85.0`).
+2. Open a **new, disposable test folder** in VS Code, and trust that folder if you created it and know its contents.
+3. Open the Command Palette (**Cmd+Shift+P** on macOS or **Ctrl+Shift+P** on Windows/Linux).
+4. Run **`Aegis: Show Protection Panel`**. The panel displays AEGIS's local status, restore availability, and limited Workspace Risk Scan.
+5. Follow the [step-by-step guide](docs/GETTING-STARTED.md) before experimenting with a protected file or a proposed command.
 
-Snapshots may contain copies of sensitive file contents. Never commit `.env` files, personal snapshots, private keys, live credentials, or AEGIS local runtime state to a Git repository. See [Security Model](docs/SECURITY-MODEL.md) and [Security Policy](SECURITY.md).
+> **What does “Safe” mean?** The panel status describes the AEGIS-controlled state, not a guarantee that your computer, repository, or all AI-generated changes are safe. **Restore Last Safe State** may be disabled until there is an eligible snapshot.
 
-## Project status
+## Use cases
 
-- Source license: Apache-2.0 (see [LICENSE](LICENSE)).
-- Public source release: published at https://github.com/ProlixoTech/aegis-trust.
-- VS Code Marketplace release: [AEGIS Trust 0.1.0](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust).
-- Separate platform support matrix: not yet published.
-- Project name: AEGIS Trust; VS Code extension identifier: `prolixotech.aegis-trust`.
+- **Before configuration edits:** start from a known-good state and use a supported protected-target workflow. [See the example](docs/USAGE-EXAMPLES.md#1-before-changing-a-configuration-file).
+- **Before a proposed terminal command:** review the command through an AEGIS-provided command path; never assume ordinary terminals are covered. [See the example](docs/USAGE-EXAMPLES.md#2-when-an-ai-assistant-suggests-a-terminal-command).
+- **When you want a local record:** generate a work receipt for review; it is not an independent audit. [See the example](docs/USAGE-EXAMPLES.md#3-when-you-need-a-record-of-protected-work).
 
-## Contributing
+## Important security boundaries
 
-We welcome thoughtful bug reports, tests, documentation improvements, and narrowly scoped code contributions. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. Do not post security vulnerabilities publicly; use the process in [SECURITY.md](SECURITY.md).
+- **Not a universal firewall or sandbox.** Operations in regular terminals, external agents, or other extensions can bypass AEGIS-controlled workflows.
+- **Not a backup service.** Keep independent backups, access controls, and human review.
+- **Keep local snapshots private.** The `.aegis/` working directory can contain snapshots of sensitive content. Never commit it, real `.env` values, private keys, credentials, or unsanitized logs.
+- **No live managed ruleset updates in 0.1.0.** ProlixoTech Inc. does not currently operate a server ruleset service for AEGIS Trust. The bundled public key and local fallback do not imply an active signing service.
+- **No independent security-audit claim.** Internal tests are useful evidence, not a guarantee across every workflow or platform.
 
-## Stewardship and contact
+Read the [security model](docs/SECURITY-MODEL.md) and [security reporting policy](SECURITY.md) for details.
 
-Maintained as an open-source initiative by **ProlixoTech Inc.**  
-Project contact: **mathew.lee@prolixotech.com**  
-Website: https://prolixotech.com/
+## Project and community
 
-For license terms, see [LICENSE](LICENSE).
+- **Release:** 0.1.0 — [Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)
+- **Publisher:** `prolixotech` · **Extension ID:** `prolixotech.aegis-trust`
+- **License:** [Apache-2.0](LICENSE)
+- **Report a reproducible bug or request an improvement:** [GitHub Issues](https://github.com/ProlixoTech/aegis-trust/issues)
+- **Propose a code change:** [Pull Requests](https://github.com/ProlixoTech/aegis-trust/pulls) · read [CONTRIBUTING.md](CONTRIBUTING.md)
+- **Report a security vulnerability privately:** follow [SECURITY.md](SECURITY.md). Do not post secrets or exploitable details to a public issue.
 
-## Server ruleset service availability
-
-ProlixoTech Inc. does not currently operate a server ruleset service for AEGIS Trust.
-This release does **not** include live, company-managed remote ruleset updates.
-Features requiring an authenticated server-signed ruleset may be unavailable or disabled.
-
-The included Ed25519 public key is a client trust anchor; it is not proof that a
-live signing service exists. The bundled catastrophic fallback is local data,
-not a live or remotely delivered server-signed ruleset. Do not rely on this
-release for automatic server ruleset updates.
+Maintained by **ProlixoTech Inc.** · [Website](https://prolixotech.com/) · Contact: **mathew.lee@prolixotech.com**
