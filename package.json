@@ -3,9 +3,10 @@
   "name": "aegis-trust",
   "repository": {"type": "git", "url": "https://github.com/ProlixoTech/aegis-trust"},
   "displayName": "AEGIS Trust",
-  "description": "A free, open-source VS Code extension for workspace snapshots, recoverability checks, and review of proposed operations.",
+  "description": "Free, open-source VS Code safety tools for AI-assisted coding: snapshots, recovery checks, and reviewed command handoff.",
+  "keywords": ["AI coding", "workspace safety", "snapshots", "recoverability", "command review", "developer safety"],
   "publisher": "prolixotech",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.85.0"
   },
