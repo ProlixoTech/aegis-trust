@@ -14,7 +14,7 @@ We will review reports and coordinate reasonable next steps; specific response o
 
 ## Public release status
 
-**AEGIS Trust 0.1.0** is publicly available on the VS Code Marketplace. This is an initial release; publication does not imply an independent security audit or guaranteed protection across every workflow or platform. No fixed support period or security response-time commitment has been established.
+**AEGIS Trust 0.1.1** is publicly available on the VS Code Marketplace. This is an initial release; publication does not imply an independent security audit or guaranteed protection across every workflow or platform. No fixed support period or security response-time commitment has been established.
 
 ## Important limits
 

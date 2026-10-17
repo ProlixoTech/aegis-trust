@@ -56,7 +56,7 @@ Some operations require an existing valid baseline, a trusted workspace, and oth
 - Universal protection against every AI agent, shell command, edit, malware program or file operation.
 - Complete recovery without an eligible local baseline or separate backups.
 - Safe handling of genuine private keys in a demo; use only fictional test values.
-- A current company-operated remote ruleset-update or signing service in release 0.1.0.
+- A current company-operated remote ruleset-update or signing service in release 0.1.1.
 - An independently audited guarantee across every operating system or negative-path scenario.
 
 **Continue:** [Step-by-step practice](GETTING-STARTED.md) · [FAQ](FAQ.md) · [Security Model](SECURITY-MODEL.md) · [Install](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)

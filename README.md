@@ -1,10 +1,10 @@
-# AEGIS Trust
+# AEGIS Trust — VS Code extension for AI-assisted coding safety
 
-**Review AI-suggested actions and prepare a recoverable starting point for important project files.**
+**Free, open-source developer safety tools for AI-assisted coding: local file snapshots, recovery checks, and proposed terminal command review.**
 
-AEGIS Trust is a **free, open-source VS Code extension** for selected local file-protection workflows: baselines, snapshots, restore checks, command review, and work receipts. It helps developers pause before acting on risky changes **inside AEGIS-managed workflows**; it does not monitor every command or AI assistant.
+AEGIS Trust helps VS Code developers check selected workspace files and AI-suggested actions before making changes. It provides protected-file baselines and snapshots, restore-oriented checks, review of proposed terminal commands, and local work receipts. These capabilities apply **only within supported AEGIS-managed workflows**; AEGIS cannot intercept every AI assistant, shell command, or filesystem operation.
 
-**[Install AEGIS Trust (https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)** · **[Start in 3 minutes](docs/GETTING-STARTED.md)** · [Try a 10-minute practice exercise](docs/GETTING-STARTED.md#the-10-minute-practice-exercise) · [FAQ](docs/FAQ.md)
+**[Install AEGIS Trust on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)** · **[Start in 3 minutes](docs/GETTING-STARTED.md)** · [Try a 10-minute practice exercise](docs/GETTING-STARTED.md#the-10-minute-practice-exercise) · [FAQ](docs/FAQ.md)
 
 ## Why would I use this?
 
@@ -45,14 +45,14 @@ That's enough to explore the interface without touching a real project. For a co
 - **AEGIS controls only its supported workflows.** Ordinary terminals, other VS Code extensions, operating-system processes and unintegrated AI agents are not universally blocked.
 - **AEGIS is not a sandbox, an antivirus product, a secrets manager, or a backup replacement.** Keep independent backups and review any proposed change.
 - **Snapshots can contain sensitive file contents.** The local `.aegis/` folder must not be committed to Git, shared publicly or treated as a secure vault.
-- **No live company-operated remote ruleset-update service is included in version 0.1.0.** The included public-key trust material and bundled fallback are not evidence of an active signing service.
+- **No live company-operated remote ruleset-update service is included in version 0.1.1.** The included public-key trust material and bundled fallback are not evidence of an active signing service.
 - **No independent security audit has been completed or claimed.** Internal tests and an installed-extension smoke check do not guarantee all platforms or failure paths.
 
 Read [Security Model](docs/SECURITY-MODEL.md), [FAQ](docs/FAQ.md) and [Security Policy](SECURITY.md).
 
 ## Open source and support
 
-- **Current Marketplace release:** [AEGIS Trust 0.1.0](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust) — extension ID `prolixotech.aegis-trust`.
+- **Current Marketplace release:** [AEGIS Trust 0.1.1](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust) — extension ID `prolixotech.aegis-trust`.
 - **License:** [Apache-2.0](LICENSE).
 - **Bugs and feature requests:** [GitHub Issues](https://github.com/ProlixoTech/aegis-trust/issues).
 - **Source changes:** [Pull Requests](https://github.com/ProlixoTech/aegis-trust/pulls) — please read [CONTRIBUTING.md](CONTRIBUTING.md).

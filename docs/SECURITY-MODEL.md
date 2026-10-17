@@ -1,8 +1,8 @@
-# AEGIS Trust — security model (0.1.0)
+# AEGIS Trust — security model (0.1.1)
 
 ## Scope
 
-AEGIS Trust is a free, open-source VS Code extension intended to improve developer awareness and recoverability **within supported, AEGIS-managed workflows**. Version 0.1.0 is publicly available on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust).
+AEGIS Trust is a free, open-source VS Code extension intended to improve developer awareness and recoverability **within supported, AEGIS-managed workflows**. Version 0.1.1 is publicly available on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust).
 
 Supported concepts include selected protected targets, local baseline and snapshot handling, restore validation, command review and evidence-oriented Work Receipts. The extension is **not** a universal filesystem access-control mechanism.
 
@@ -12,7 +12,7 @@ Supported concepts include selected protected targets, local baseline and snapsh
 - **Outside managed workflows:** arbitrary commands in ordinary terminals, other extensions, operating-system processes, unintegrated AI agents and external filesystem APIs are not universally intercepted.
 - **Sensitive local state:** snapshots may include full contents of files such as `.env`. Keep `.aegis/` protected by local permissions and excluded from Git and public sharing. AEGIS is not a secrets manager.
 - **Workspace trust:** VS Code Restricted Mode limits AEGIS operations until the user explicitly trusts the workspace. Never trust an unfamiliar folder merely to activate an extension.
-- **External rule delivery:** ProlixoTech Inc. does not currently operate a live remote signed-ruleset update service for version 0.1.0. Bundled public-key material and fallback data are not a live update channel.
+- **External rule delivery:** ProlixoTech Inc. does not currently operate a live remote signed-ruleset update service for version 0.1.1. Bundled public-key material and fallback data are not a live update channel.
 
 ## What validation supports the release?
 

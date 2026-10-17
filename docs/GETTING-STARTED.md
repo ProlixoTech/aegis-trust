@@ -7,7 +7,7 @@ Estimated time: **3 minutes** to open the panel; approximately **10 minutes** fo
 ## Step 1 — install and open a safe practice folder
 
 1. Open the [AEGIS Trust Marketplace page](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust) and select **Install**, or search for **AEGIS Trust** by **ProlixoTech Inc.** in VS Code's Extensions view.
-2. In the Extensions view, confirm the identifier **`prolixotech.aegis-trust`** and version **`0.1.0`**.
+2. In the Extensions view, confirm the identifier **`prolixotech.aegis-trust`** and version **`0.1.1`**.
 3. On your computer, create an **empty folder you can discard after practice**. Do not use your employer's repository or a folder containing real passwords.
 4. In VS Code, choose **File > Open Folder…** and open your new folder.
 5. If VS Code shows **Restricted Mode**, trust **only this folder that you created**. AEGIS intentionally disables operations in untrusted workspaces.
@@ -88,7 +88,7 @@ echo AEGIS_DEMO_ONLY
 - Confirm that the file is one of the [registered protected targets](USAGE-EXAMPLES.md#what-files-are-in-scope). Not every source file or folder is protected.
 - Ordinary terminals, other extensions and unintegrated AI agents are outside universal interception claims.
 - Local `.aegis/` state may include complete file snapshots. Never commit it to Git or share it with a bug report.
-- There is no live ProlixoTech-managed remote ruleset-update service in version 0.1.0.
+- There is no live ProlixoTech-managed remote ruleset-update service in version 0.1.1.
 
 **Next:** [Everyday examples](USAGE-EXAMPLES.md) · [FAQ and fixes](FAQ.md) · [Security model](SECURITY-MODEL.md) · [Back to product introduction](../README.md)
 

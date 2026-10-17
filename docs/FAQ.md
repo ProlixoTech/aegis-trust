@@ -1,6 +1,6 @@
 # AEGIS Trust — frequently asked questions
 
-These answers describe version **0.1.0**. Start with [Getting Started](GETTING-STARTED.md) if this is your first time using the extension.
+These answers describe version **0.1.1**. Start with [Getting Started](GETTING-STARTED.md) if this is your first time using the extension.
 
 ## I installed AEGIS Trust. What do I click first?
 
@@ -44,7 +44,7 @@ AEGIS uses a workspace-local **`.aegis/`** directory for state, snapshots and re
 
 ## Are there automatic server security-rule updates?
 
-**Not in 0.1.0.** The current release does not have a live ProlixoTech-operated remote ruleset-update service. A bundled fallback or public key does not imply live delivery.
+**Not in 0.1.1.** The current release does not have a live ProlixoTech-operated remote ruleset-update service. A bundled fallback or public key does not imply live delivery.
 
 ## How do I report a problem or contribute code?
 
