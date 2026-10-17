@@ -2,9 +2,11 @@
 
 **A free, open-source safety layer for AI-assisted development in VS Code.**
 
+[Install AEGIS Trust from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)
+
 AEGIS Trust is a VS Code extension under active development. Its goal is to help developers protect important workspace files by checking recoverability and evaluating proposed operations before handing them off through AEGIS-controlled workflows.
 
-> **Public source, pre-release extension.** The source is available in this repository, but a VS Code Marketplace release has not yet been published. Public build instructions and security claims remain subject to verification. AEGIS Trust does not replace normal backups, access controls, credential management, or careful review of AI-generated changes.
+> **Initial Marketplace release (0.1.0).** AEGIS Trust is available on the VS Code Marketplace, and its source is publicly available here. Public build instructions and security claims remain subject to verification. AEGIS Trust does not replace normal backups, access controls, credential management, or careful review of AI-generated changes.
 
 ## What AEGIS is designed to do
 
@@ -25,7 +27,8 @@ Snapshots may contain copies of sensitive file contents. Never commit `.env` fil
 
 - Source license: Apache-2.0 (see [LICENSE](LICENSE)).
 - Public source release: published at https://github.com/ProlixoTech/aegis-trust.
-- Official release packages and platform support matrix: not yet published.
+- VS Code Marketplace release: [AEGIS Trust 0.1.0](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust).
+- Separate platform support matrix: not yet published.
 - Project name: AEGIS Trust; VS Code extension identifier: `prolixotech.aegis-trust`.
 
 ## Contributing
