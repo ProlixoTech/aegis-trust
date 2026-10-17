@@ -1,58 +1,63 @@
-# AEGIS Trust: everyday use cases
+# AEGIS Trust — practical use cases
 
-These examples explain **where AEGIS Trust can help** and where the developer must still make the final decision. They describe supported AEGIS-managed workflows, not a guarantee that all changes by AI assistants are intercepted.
+Use the following as guides for AEGIS-managed VS Code workflows, **not** as proof that the extension blocks every possible AI, shell, or filesystem operation. For a first hands-on exercise, start with [Getting Started](GETTING-STARTED.md).
 
-## 1. Before changing a configuration file
+## 1. Changing a protected file
 
-**Situation:** an AI assistant proposes editing `.env`, `package.json`, or `tsconfig.json`.
+**Situation:** an AI coding assistant suggests changing `package.json`, `tsconfig.json`, or `.env`.
 
-**What you can do:**
+**Before the change:** check that the current file is correct, keep a separate backup, and confirm its baseline has been registered through the extension's local protected-file workflow.
 
-1. Keep a separate backup and confirm the current file is correct.
-2. In a trusted VS Code workspace, open **`Aegis: Show Protection Panel`**.
-3. Use the extension's supported baseline/snapshot workflow for an eligible protected target before relying on its restore functionality.
-4. Review any proposed edit yourself and check the resulting file. The availability of restore depends on a valid local snapshot and the particular workflow.
+**What AEGIS does:** for supported target paths in a trusted workspace, the extension can keep local baseline/snapshot state and can mark a protected-file change as **Blocked**. For an eligible registered baseline it can provide **Restore Last Safe State**.
 
-**Boundary:** only specific registered targets and AEGIS-managed paths are in scope. A normal shell command or another extension can change a file outside AEGIS's controls. Never test recovery against production secrets.
+**What you do:** inspect both the actual file and the panel; decide whether restoration is appropriate. Restore can write to **more than one registered target**. Never test with real credentials or unbacked-up production files.
 
-## 2. When an AI assistant suggests a terminal command
+**Try this yourself:** follow the [10-minute fictional `.env` exercise](GETTING-STARTED.md#the-10-minute-practice-exercise).
 
-**Situation:** an assistant proposes a shell command that might change your project or its configuration.
+## 2. Reviewing an AI-proposed command
 
-**What you can do:**
+**Situation:** an assistant suggests a shell command, and you want to inspect it rather than immediately paste it into a terminal.
 
-1. Read the command and understand the files or processes it may affect.
-2. Open **`Aegis: Review AI Command / Action`** or **`Aegis: Protected Terminal (MVP-0)`** from the VS Code Command Palette.
-3. Follow the review result. AEGIS may block a handoff or allow you to insert a permitted command into a terminal.
-4. **Decide yourself whether to run it.** Terminal handoff is not automatic execution.
+1. Open the VS Code Command Palette, then run **`Aegis: Review AI Command / Action`**.
+2. With no editor selection, the extension asks **`Paste or type the AI-generated command or action to review`**. Enter the proposed text yourself and press Enter.
+3. Read the resulting review and any allowed/blocked next step. AEGIS does **not** execute the command simply because you requested a review.
+4. If you use **`Aegis: Protected Terminal (MVP-0)`**, a permitted command is handed to a dedicated terminal **without being run automatically**. Review it again before executing.
 
-**Boundary:** a regular terminal, outside process, or unintegrated AI agent is not automatically governed by AEGIS. Do not interpret an allowed handoff as proof that a command is universally harmless.
+**Boundary:** commands run in an ordinary terminal, or edits by other extensions and external agents, are not automatically covered. An allowed result is not an all-purpose safety guarantee.
 
-## 3. When you need a record of protected work
+## 3. Reading a Work Receipt
 
-**Situation:** after working in a supported workflow, you want to inspect the local evidence of relevant events.
+**Situation:** you want a local record of AEGIS-managed work.
 
-**What you can do:**
+1. After supported protected activity, run **`Aegis: Generate Work Receipt`** from the Command Palette.
+2. If local ledger records are available and the operation succeeds, the extension writes a Markdown receipt under the workspace's local **`.aegis/receipts/`** area.
+3. Read the receipt's event timeline, success/verification fields and warnings. Compare it to the actual project state.
 
-1. Open the Command Palette and choose **`Aegis: Generate Work Receipt`**.
-2. Review the resulting Markdown receipt, if local ledger events are available.
-3. Check the reported events and status against the actual workspace before sharing any summary.
+**Boundary:** a Work Receipt is local evidence of specified AEGIS events—not an independent audit, cloud attestation, or a record of all external changes. Do not share unsanitized local data.
 
-**Boundary:** the receipt describes locally available AEGIS ledger information. It is **not** a cloud verification, external audit, or proof that no other changes occurred. Do not share unsanitized local logs or sensitive file contents.
+## 4. Reading the Workspace Risk Scan
 
-## 4. When you open an unfamiliar project
+**Situation:** you open a project and want a quick prompt about filenames worth checking.
 
-**Situation:** you want a quick visual indication of common files that deserve extra care before editing.
+1. Open **`Aegis: Show Protection Panel`** and locate **WORKSPACE RISK SCAN**.
+2. Review any listed filenames and the accompanying reason. The current scan considers common top-level configuration files and selected shallow paths, returning up to three suggestions.
+3. Independently review real file contents and the project's context before making decisions.
 
-**What you can do:** open **`Aegis: Show Protection Panel`** in a trusted workspace and read **Workspace Risk Scan**.
+**Boundary:** it is a **limited filename-based local scan**, not a vulnerability scanner, content inspection, or security clearance. “No high-risk files detected” does not imply a safe project.
 
-**What you should expect:** up to three filenames are highlighted using limited local heuristics. The scan considers file names and selected shallow locations; it **does not read the contents of those files**. A result such as “No high-risk files detected by static scan” is not a security clearance.
+## What files are in scope?
 
-## AEGIS Trust is not
+The current public source includes a **static registry** of eligible protected paths. These include `.env`, `.env.local`, `package.json`, `tsconfig.json`, and specified `src/*.ts` implementation files. **Not every file with the same extension is registered**, and the scan's filenames do not necessarily match the protected-target registry.
 
-- A universal sandbox, malware scanner, or filesystem firewall.
-- A guarantee that every VS Code extension, AI agent, or terminal command is covered.
-- A replacement for backups, secrets management, access controls, or careful human review.
-- A live remotely signed ruleset-update service in version 0.1.0.
+Some operations require an existing valid baseline, a trusted workspace, and other local state. A button being visible is not a promise it will be available in every situation.
 
-**Start here:** [Getting started](GETTING-STARTED.md) · [Security model](SECURITY-MODEL.md) · [Install](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust) · [Back to README](../README.md)
+## What AEGIS Trust does not promise
+
+- Universal protection against every AI agent, shell command, edit, malware program or file operation.
+- Complete recovery without an eligible local baseline or separate backups.
+- Safe handling of genuine private keys in a demo; use only fictional test values.
+- A current company-operated remote ruleset-update or signing service in release 0.1.0.
+- An independently audited guarantee across every operating system or negative-path scenario.
+
+**Continue:** [Step-by-step practice](GETTING-STARTED.md) · [FAQ](FAQ.md) · [Security Model](SECURITY-MODEL.md) · [Install](https://marketplace.visualstudio.com/items?itemName=prolixotech.aegis-trust)
+

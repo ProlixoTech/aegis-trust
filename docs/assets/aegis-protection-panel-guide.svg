@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="678" viewBox="0 0 840 678" role="img" aria-labelledby="t d">
+<title id="t">AEGIS Trust 0.1.0 Protection panel — illustrated reference</title>
+<desc id="d">Simplified visual guide based on the actual installed extension. A Safe status card is above the disabled Restore Last Safe State button, followed by Workspace Risk Scan. This is a schematic reference, not a captured screenshot.</desc>
+<rect width="840" height="678" rx="18" fill="#111315"/>
+<rect x="25" y="20" width="790" height="53" rx="8" fill="#1c1e20"/>
+<text x="56" y="56" font-family="Arial,sans-serif" font-size="24" fill="#eeeeee" font-weight="600">Aegis Protection</text>
+<rect x="52" y="96" width="736" height="236" rx="14" fill="#212325"/>
+<rect x="52" y="96" width="8" height="236" rx="4" fill="#4cb264"/>
+<text x="80" y="143" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#50b566">OK  Aegis: Safe</text>
+<text x="80" y="181" font-family="Arial,sans-serif" font-size="19" fill="#c0c0c0">Aegis is active. Save a protected file to register a baseline.</text>
+<text x="80" y="214" font-family="Arial,sans-serif" font-size="19" fill="#c0c0c0">License tier: free</text>
+<text x="80" y="246" font-family="Arial,sans-serif" font-size="19" fill="#c0c0c0">License capabilities: coreProtection, workReceipt,</text>
+<text x="80" y="273" font-family="Arial,sans-serif" font-size="19" fill="#c0c0c0">protectedTerminal, aiExecutionGatewayMvp0,</text>
+<text x="80" y="300" font-family="Arial,sans-serif" font-size="19" fill="#c0c0c0">aiCommandReview</text>
+<rect x="52" y="352" width="736" height="66" rx="9" fill="#204254"/>
+<text x="420" y="393" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#858d90">Restore Last Safe State</text>
+<rect x="52" y="440" width="736" height="172" rx="13" fill="#212325"/>
+<rect x="52" y="440" width="5" height="172" rx="3" fill="#9b9b9b"/>
+<text x="79" y="478" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#c8c8c8">WORKSPACE RISK SCAN</text>
+<text x="79" y="508" font-family="Arial,sans-serif" font-size="16" fill="#bdbdbd">Top files to review before AI edits:</text>
+<text x="79" y="553" font-family="Arial,sans-serif" font-size="17" font-style="italic" fill="#bebebe">No high-risk files detected by static scan.</text>
+<text x="79" y="588" font-family="Arial,sans-serif" font-size="14" fill="#ababab">Static scan only - Top-level/1-level - Local only - No file contents read</text>
+<text x="420" y="645" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#999999">Illustrated reference from a verified 0.1.0 panel, not a screenshot</text>
+</svg>
